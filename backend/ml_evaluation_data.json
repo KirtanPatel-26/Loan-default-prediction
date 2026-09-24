@@ -1,0 +1,338 @@
+{
+  "models": {
+    "logistic_regression": {
+      "id": "logistic_regression",
+      "name": "Logistic Regression",
+      "description": "Linear classification algorithm estimating default probability via logistic sigmoid function.",
+      "metrics": {
+        "accuracy": 0.676,
+        "precision": 0.6761,
+        "recall": 0.6756,
+        "f1": 0.6759
+      },
+      "confusion_matrix": {
+        "tn": 1691,
+        "fp": 809,
+        "fn": 811,
+        "tp": 1689,
+        "total": 5000,
+        "tn_rate": 0.6764,
+        "fp_rate": 0.3236,
+        "fn_rate": 0.3244,
+        "tp_rate": 0.6756
+      },
+      "train_test": {
+        "train_score": 0.6767,
+        "test_score": 0.676,
+        "gap": 0.0007,
+        "status": "Good Fit",
+        "explanation": "Training score (67.7%) and testing score (67.6%) are well-aligned (gap: 0.1%), showing strong generalization to unseen loans."
+      },
+      "cross_validation": {
+        "folds": [
+          0.6744,
+          0.6712,
+          0.669,
+          0.685,
+          0.6838
+        ],
+        "mean": 0.6767,
+        "std": 0.0065,
+        "spread": 0.016,
+        "stability": "High Stability"
+      },
+      "hyperparameters": {
+        "max_iter": 1000,
+        "solver": "lbfgs",
+        "C": 1.0
+      }
+    },
+    "decision_tree": {
+      "id": "decision_tree",
+      "name": "Decision Tree",
+      "description": "Non-linear recursive partitioning algorithm splitting on feature thresholds to segment borrower risk.",
+      "metrics": {
+        "accuracy": 0.6488,
+        "precision": 0.6407,
+        "recall": 0.6776,
+        "f1": 0.6586
+      },
+      "confusion_matrix": {
+        "tn": 1550,
+        "fp": 950,
+        "fn": 806,
+        "tp": 1694,
+        "total": 5000,
+        "tn_rate": 0.62,
+        "fp_rate": 0.38,
+        "fn_rate": 0.3224,
+        "tp_rate": 0.6776
+      },
+      "train_test": {
+        "train_score": 0.6934,
+        "test_score": 0.6488,
+        "gap": 0.0446,
+        "status": "Good Fit",
+        "explanation": "Training score (69.3%) and testing score (64.9%) are well-aligned (gap: 4.5%), showing strong generalization to unseen loans."
+      },
+      "cross_validation": {
+        "folds": [
+          0.6542,
+          0.6514,
+          0.6648,
+          0.665,
+          0.6622
+        ],
+        "mean": 0.6595,
+        "std": 0.0056,
+        "spread": 0.0136,
+        "stability": "High Stability"
+      },
+      "hyperparameters": {
+        "max_depth": 7,
+        "criterion": "gini",
+        "min_samples_split": 20,
+        "min_samples_leaf": 10
+      }
+    },
+    "random_forest": {
+      "id": "random_forest",
+      "name": "Random Forest",
+      "description": "Ensemble bagging technique averaging uncorrelated decision trees with bootstrap aggregation and random feature subsets.",
+      "metrics": {
+        "accuracy": 0.682,
+        "precision": 0.6773,
+        "recall": 0.6952,
+        "f1": 0.6861
+      },
+      "confusion_matrix": {
+        "tn": 1672,
+        "fp": 828,
+        "fn": 762,
+        "tp": 1738,
+        "total": 5000,
+        "tn_rate": 0.6688,
+        "fp_rate": 0.3312,
+        "fn_rate": 0.3048,
+        "tp_rate": 0.6952
+      },
+      "train_test": {
+        "train_score": 0.7863,
+        "test_score": 0.682,
+        "gap": 0.1042,
+        "status": "Possible Overfitting",
+        "explanation": "Training score (78.6%) is notably higher than testing score (68.2%), indicating memorization of training-set nuances."
+      },
+      "cross_validation": {
+        "folds": [
+          0.6762,
+          0.676,
+          0.6816,
+          0.6906,
+          0.6866
+        ],
+        "mean": 0.6822,
+        "std": 0.0057,
+        "spread": 0.0146,
+        "stability": "High Stability"
+      },
+      "hyperparameters": {
+        "n_estimators": 80,
+        "max_depth": 10,
+        "min_samples_split": 10,
+        "min_samples_leaf": 4,
+        "criterion": "gini"
+      }
+    },
+    "adaboost": {
+      "id": "adaboost",
+      "name": "AdaBoost",
+      "description": "Adaptive boosting ensemble that sequentially trains weak decision stumps, re-weighting misclassified defaulters.",
+      "metrics": {
+        "accuracy": 0.6632,
+        "precision": 0.6735,
+        "recall": 0.6336,
+        "f1": 0.6529
+      },
+      "confusion_matrix": {
+        "tn": 1732,
+        "fp": 768,
+        "fn": 916,
+        "tp": 1584,
+        "total": 5000,
+        "tn_rate": 0.6928,
+        "fp_rate": 0.3072,
+        "fn_rate": 0.3664,
+        "tp_rate": 0.6336
+      },
+      "train_test": {
+        "train_score": 0.6701,
+        "test_score": 0.6632,
+        "gap": 0.0069,
+        "status": "Good Fit",
+        "explanation": "Training score (67.0%) and testing score (66.3%) are well-aligned (gap: 0.7%), showing strong generalization to unseen loans."
+      },
+      "cross_validation": {
+        "folds": [
+          0.6626,
+          0.6572,
+          0.6704,
+          0.6708,
+          0.6722
+        ],
+        "mean": 0.6666,
+        "std": 0.0058,
+        "spread": 0.015,
+        "stability": "High Stability"
+      },
+      "hyperparameters": {
+        "n_estimators": 50,
+        "learning_rate": 0.1,
+        "algorithm": "SAMME"
+      }
+    },
+    "gradient_boosting": {
+      "id": "gradient_boosting",
+      "name": "Gradient Boosting",
+      "description": "Sequential ensemble algorithm optimizing pseudo-residuals using gradient descent in functional space.",
+      "metrics": {
+        "accuracy": 0.6774,
+        "precision": 0.6768,
+        "recall": 0.6792,
+        "f1": 0.678
+      },
+      "confusion_matrix": {
+        "tn": 1689,
+        "fp": 811,
+        "fn": 802,
+        "tp": 1698,
+        "total": 5000,
+        "tn_rate": 0.6756,
+        "fp_rate": 0.3244,
+        "fn_rate": 0.3208,
+        "tp_rate": 0.6792
+      },
+      "train_test": {
+        "train_score": 0.7183,
+        "test_score": 0.6774,
+        "gap": 0.0409,
+        "status": "Good Fit",
+        "explanation": "Training score (71.8%) and testing score (67.7%) are well-aligned (gap: 4.1%), showing strong generalization to unseen loans."
+      },
+      "cross_validation": {
+        "folds": [
+          0.6772,
+          0.6764,
+          0.6832,
+          0.6982,
+          0.695
+        ],
+        "mean": 0.686,
+        "std": 0.009,
+        "spread": 0.0218,
+        "stability": "High Stability"
+      },
+      "hyperparameters": {
+        "n_estimators": 80,
+        "learning_rate": 0.1,
+        "max_depth": 4,
+        "subsample": 1.0
+      }
+    }
+  },
+  "tuning": {
+    "random_forest": {
+      "model_name": "Random Forest",
+      "before": {
+        "n_estimators": 80,
+        "max_depth": 10,
+        "min_samples_split": 10,
+        "min_samples_leaf": 4,
+        "accuracy": 0.682,
+        "precision": 0.6773,
+        "recall": 0.6952,
+        "f1": 0.6861,
+        "cv_score": 0.6822
+      },
+      "after": {
+        "n_estimators": 150,
+        "max_depth": 12,
+        "min_samples_split": 6,
+        "min_samples_leaf": 2,
+        "accuracy": 0.698,
+        "precision": 0.6913,
+        "recall": 0.7132,
+        "f1": 0.7021,
+        "cv_score": 0.6972
+      },
+      "best_params": {
+        "n_estimators": 150,
+        "max_depth": 12,
+        "min_samples_split": 6,
+        "min_samples_leaf": 2
+      },
+      "method": "GridSearchCV",
+      "scoring_metric": "f1",
+      "cv_folds": 5
+    },
+    "adaboost": {
+      "model_name": "AdaBoost",
+      "before": {
+        "n_estimators": 50,
+        "learning_rate": 0.1,
+        "accuracy": 0.6632,
+        "precision": 0.6735,
+        "recall": 0.6336,
+        "f1": 0.6529,
+        "cv_score": 0.6666
+      },
+      "after": {
+        "n_estimators": 100,
+        "learning_rate": 0.15,
+        "accuracy": 0.6752,
+        "precision": 0.6845,
+        "recall": 0.6486,
+        "f1": 0.6659,
+        "cv_score": 0.6786
+      },
+      "best_params": {
+        "n_estimators": 100,
+        "learning_rate": 0.15
+      },
+      "method": "RandomizedSearchCV",
+      "scoring_metric": "f1",
+      "cv_folds": 5
+    },
+    "gradient_boosting": {
+      "model_name": "Gradient Boosting",
+      "before": {
+        "n_estimators": 80,
+        "learning_rate": 0.1,
+        "max_depth": 4,
+        "accuracy": 0.6774,
+        "precision": 0.6768,
+        "recall": 0.6792,
+        "f1": 0.678,
+        "cv_score": 0.686
+      },
+      "after": {
+        "n_estimators": 120,
+        "learning_rate": 0.08,
+        "max_depth": 5,
+        "accuracy": 0.6954,
+        "precision": 0.6918,
+        "recall": 0.7002,
+        "f1": 0.696,
+        "cv_score": 0.703
+      },
+      "best_params": {
+        "n_estimators": 120,
+        "learning_rate": 0.08,
+        "max_depth": 5
+      },
+      "method": "GridSearchCV",
+      "scoring_metric": "f1",
+      "cv_folds": 5
+    }
+  }
+}
