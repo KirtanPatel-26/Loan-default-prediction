@@ -4,6 +4,11 @@ An enterprise loan default risk assessment platform featuring an ML backend (Fas
 
 [![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/KirtanPatel-26/Loan-default-prediction)
 
+### 🌐 Live Links
+- **Interactive 3D Web App (Frontend)**: [https://loanshield-frontend.onrender.com](https://loanshield-frontend.onrender.com)
+- **ML Backend API**: [https://loanshield-api-snrb.onrender.com](https://loanshield-api-snrb.onrender.com)
+- **Interactive Swagger API Docs**: [https://loanshield-api-snrb.onrender.com/docs](https://loanshield-api-snrb.onrender.com/docs)
+
 ---
 
 ## 🌟 Key Features
