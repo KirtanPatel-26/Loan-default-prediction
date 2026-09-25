@@ -2,6 +2,8 @@
 
 An enterprise loan default risk assessment platform featuring an ML backend (FastAPI + Scikit-Learn) and an interactive 3D frontend (React 19 + Three.js + Tailwind CSS).
 
+[![Deploy to Render](https://render.com/images/deploy-to-render-button.svg)](https://render.com/deploy?repo=https://github.com/KirtanPatel-26/Loan-default-prediction)
+
 ---
 
 ## 🌟 Key Features
