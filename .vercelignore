@@ -1,0 +1,9 @@
+# Vercel deployment exclusions
+# Prevents Vercel CLI from misidentifying the root as a Python/FastAPI backend
+backend/
+Loan_default_streamlit/
+Task4_Logistic_Model.ipynb
+requirements.txt
+.python-version
+*.ipynb
+__MACOSX/
