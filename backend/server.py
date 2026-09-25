@@ -533,7 +533,7 @@ def get_model_info():
 # ===========================================================================
 import json
 
-EVAL_DATA_PATH = os.path.join(BASE_DIR, "ml_evaluation_data.json")
+EVAL_DATA_PATH = resolve_file("ml_evaluation_data.json")
 
 def load_eval_data():
     if os.path.exists(EVAL_DATA_PATH):
